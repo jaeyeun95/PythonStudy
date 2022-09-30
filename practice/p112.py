@@ -4,4 +4,10 @@
 # 영어  75
 # 수학  55
 
+score = [80, 75, 55]
+num = 0
+for n in score:
+    num += n
 
+avg = num / 3
+avg
