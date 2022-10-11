@@ -1,5 +1,8 @@
 # for 반복문
 # 1. 전형적인 for문
+from unittest import result
+
+
 test_list = ['one','two','three']
 for i in test_list:
     print(i)
@@ -37,3 +40,14 @@ for i in range(2, 10):
     for j in range(1,10):
         print(i*j, end = " ")
     print('')
+# 리스트 내포 사용하기
+# a리스트 각 항목에 3을 곱한 결과를 result 리스트에 담기
+a = [1,2,3,4]
+result = []
+for num in a:
+    result.append(num*3)
+print(result)
+# 리스트 내포 사용하기
+a = [1,2,3,4]
+result = [num * 3 for num in a]
+print(result)
