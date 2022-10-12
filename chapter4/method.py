@@ -54,3 +54,10 @@ def add_mul(choice, *args):
     return result
 result = add_mul('mul', 1,2,3,4,5)
 print(result)
+
+# 키워드 파라미터
+# 키워드 파라미터를 사용할 때는 매개변수 앞에 별 두개(**)를 붙여서 사용한다.
+def print_kwargs(**kwargs):
+    print(kwargs)
+print_kwargs(a=1)
+print_kwargs(name='foo', age=3)
