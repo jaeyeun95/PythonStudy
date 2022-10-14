@@ -61,3 +61,13 @@ def print_kwargs(**kwargs):
     print(kwargs)
 print_kwargs(a=1)
 print_kwargs(name='foo', age=3)
+
+# 함수의 결과값은 언제나 하나이다.
+def add_and_mul(a,b):
+    return a+b, a*b
+result = add_and_mul(3,4)
+result
+# 리턴 값을 2개의 결괏값으로 받으려면 변수를 2개 선언해줘야 한다.
+result1, result2 = add_and_mul(3,4)
+result1
+result2
