@@ -71,3 +71,49 @@ result
 result1, result2 = add_and_mul(3,4)
 result1
 result2
+# 특별한 상황일 때 함수를 빠져나가고 싶다면 return을 단독으로 써서 함수를 즉시 빠져나갈 수 있다. 
+def say_nic(nick):
+    if nick == '바보':
+        return
+    print('나의 별명은 %s입니다.' % nick)
+say_nic('야호')
+# 매개변수에 초깃값 미리 설정하기
+def say_myself(name, old, man=True):
+    print('나의 이름은 %s입니다.' % name)
+    print('나이는 %d살입니다.' % old)
+    if man:
+        print('남자입니다.')
+    else:
+        print('여자입니다.')
+say_myself('박응용', 27)
+say_myself('박응용', 28, True)
+
+# 함수 안에서 함수 밖의 변수를 변경하는 방법
+# 1. return 사용하기
+a = 1
+def vartest(a):
+    a = a + 1
+    return a
+
+a = vartest(a)
+print(a)
+# 2. global 명령어 사용하기
+a = 1
+def vartest():
+    global a
+    a = a + 1
+
+vartest()
+print(a)
+# lambda
+# 함수를 생성할 때 사용하는 예약어로 def와 동일한 역할을 한다.
+# lambda 매개변수1, 매개변수2 ... : 매개변수를 사용한 표현식
+# lambda 식
+add = lambda a, b: a + b
+result = add(3, 4)
+print('lambda 결과 %d '% result)
+# def 식
+def add(a, b):
+    return a + b
+result = add(4,5)
+print('def사용식 결과 %d '% result)
