@@ -42,3 +42,28 @@ try:
     f = open('dddd', 'r')
 except FileNotFoundError:
     pass
+
+# 오류 일부러 발생시키기 -> raise 명령어 사용
+class Bird:
+    def fly(self):
+        # raise NotImplementedError
+        print('very fast')
+
+class Eagle(Bird):
+    pass
+
+eagle = Eagle()
+eagle.fly()
+# 예외 만들기
+class MyError(Exception):
+	pass
+def say_nick(nick):
+    if nick == '바보':
+        raise MyError()
+    print(nick)
+
+try:    
+    say_nick("천사")
+    say_nick('바보')
+except MyError:
+    print('허용되지 않는 별명입니다.')
