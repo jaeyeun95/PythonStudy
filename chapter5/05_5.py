@@ -54,3 +54,32 @@ b = input('Enter : ') # -> 자바에서 스캐너
 b
 # int -> int(x) 정수를 입력으로 받으면 그대로 돌려준다.
 int('3')
+
+# isinstance -> isinstance(object, class) 입력으로 받은 인스턴스가 그 클래스의 인스턴스인지를 판단하여 True, False 로 돌려준다
+# 아무 기능이 없는 Person 클래스 생성
+class Person: 
+    pass 
+
+a = Person()
+isinstance(a, Person)
+# len(x)
+len('python')
+# list(s)
+list('python')
+# map(f, iterable)
+def two_times(numberList):
+    result = []
+    for number in numberList:
+        result.append(number*2)
+        return result
+    
+result = two_times([1,2,3,4])
+print(result)
+
+# oct(x)
+oct(34)
+# round -> 숫자를 입력받아 반올림
+round(4.6)
+round(3.1)
+# sorted
+sorted([3,4,1])
